@@ -1,0 +1,21 @@
+.carousel-caption{
+    background: rgba(0,0,0,0.5);
+}
+
+Jumbotron{
+    margin-top:40px;
+}
+
+.list{
+    max-height: 480px;
+    overflow-y: scroll;
+}
+
+.media-body p, .media-body h5{
+    margin-bottom: 0px;
+}
+
+h1{
+    font-family: 'DancingScript', serif;
+    font-weight: bold;
+}
