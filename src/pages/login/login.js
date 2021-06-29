@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import logo from '../../logo.svg';
+import logo from '../../asset/images/logo-bvs21.svg';
 import * as React from "react";
 
 class Login extends React.Component{

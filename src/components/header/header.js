@@ -16,8 +16,7 @@ class Header extends React.Component{
                     <Nav className="mr-auto">
                         <Nav.Link href="#features">Accueil</Nav.Link>
                         <NavDropdown title="News" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Notes de service</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Notes d'information</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">Notes</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Anniversaires</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Evènements</NavDropdown.Item>
                         </NavDropdown>

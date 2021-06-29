@@ -1,15 +1,15 @@
 import * as React from "react";
-import './actualite.css';
 import Header from "../../components/header/header";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Footer from "../../components/footer/footer";
-import CardColumns from 'react-bootstrap/CardColumns'
 import Col from "react-bootstrap/Col";
 import bg1 from '../../asset/images/bg_login.jpg'
-import CustomCard from "../../components/custom-card/custom-card";
+import Card from "react-bootstrap/Card";
+import './detail-actualite.css';
+import Button from "react-bootstrap/Button";
 
-class Actualite extends React.Component{
+class DetailActualite extends React.Component{
     constructor(props){
         super(props);
         this.state={
@@ -63,18 +63,25 @@ class Actualite extends React.Component{
                 <Container className="mb-3 mt-7">
                     <Row>
                         <Col>
-                            <h1>Titre</h1>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <CardColumns>
-                                {
-                                    this.state.news.map( n=>{
-                                        return <CustomCard news={n} />
-                                    })
-                                }
-                            </CardColumns>
+                            <Card className="img">
+                                <Card.Img src={bg1} alt="Card image" />
+                                <Card.Body>
+                                    <Card.Title>Card title</Card.Title>
+                                    <Card.Text>
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                    <Card.Text>
+                                        Document(s)
+                                    </Card.Text>
+                                    <small className="text-muted">
+                                        Last updated 3 mins ago
+                                    </small>
+                                    <div className="text-right" >
+                                        <Button variant="dark">Retour</Button>
+                                    </div>
+                                </Card.Body>
+                            </Card>
                         </Col>
                     </Row>
                 </Container>
@@ -84,4 +91,4 @@ class Actualite extends React.Component{
     }
 }
 
-export default Actualite;
+export default DetailActualite;
