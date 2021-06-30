@@ -1,21 +1,20 @@
-.carousel-caption{
+.home-page .carousel-caption{
     background: rgba(0,0,0,0.5);
 }
 
-Jumbotron{
-    margin-top:40px;
+.home-page Jumbotron{
+
 }
 
-.list{
+.home-page .list{
     max-height: 480px;
     overflow-y: scroll;
 }
 
-.media-body p, .media-body h5{
-    margin-bottom: 0px;
+.home-page .media-body p, .home-page .media-body h5{
+    margin-bottom: 0;
 }
 
-h1{
-    font-family: 'DancingScript', serif;
-    font-weight: bold;
+.home-page .carousel img{
+    height: 500px;
 }

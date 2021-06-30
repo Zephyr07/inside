@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from "./pages/home/home";
+import {BrowserRouter, Route} from 'react-router-dom';
+import React from "react";
+import Header from "./components/header/header";
+import Story from "./pages/story/story";
+import ListeNote from "./pages/liste-note/liste-note";
+import DetailActualite from "./pages/detail-actualite/detail-actualite";
+import Birthday from "./pages/birthday/birthday";
+import Footer from "./components/footer/footer";
+import Actualite from "./pages/actualite/actualite";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <Header/>
+        <Route exact={true} path="/home" component={Home}/>
+        <Route exact={true} path="/notes" component={ListeNote}/>
+        <Route exact={true} path="/histoire" component={Story}/>
+        <Route exact={true} path="/anniversaire" component={Birthday}/>
+        <Route exact={true} path="/detail-actualite/:idActu" component={DetailActualite}/>
+        <Route exact={true} path="/actualite" component={Actualite}/>
+
+        <Footer/>
+    </BrowserRouter>
   );
 }
 

@@ -1,18 +1,15 @@
 import * as React from "react";
 import Header from "../../components/header/header";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Carousel from "react-bootstrap/Carousel";
 import ListGroup from "react-bootstrap/ListGroup";
-import Media from "react-bootstrap/Media";
-import bg1 from '../../asset/images/bg_login.jpg'
 import Footer from "../../components/footer/footer";
-import Info from "../../components/info/info";
 import './liste-note.css';
 import ListItem from "../../components/list-item/list-item";
 import Card from "react-bootstrap/Card";
+import * as api from "../../providers/api/api";
+import _ from 'lodash';
 
 class ListeNote extends React.Component{
     constructor(props){
@@ -46,15 +43,21 @@ class ListeNote extends React.Component{
     }
 
     componentDidMount(){
-
+        // recupération DES NOTES
+        let data = _.orderBy(api.getNotes(), 'type');
+        data = _.groupBy(data, 'type');
+        this.setState(
+            {
+                note_service: _.orderBy(data.service, 'updated_at').reverse(),
+                note_info: _.orderBy(data.info, 'updated_at').reverse()
+            }
+        )
     }
 
 
     render(){
         return (
-            <div>
-                <Header/>
-
+            <div className="liste-noite-page ">
                 <Container>
                     <Row>
                         <Col xs={12} md={6}>
@@ -82,8 +85,6 @@ class ListeNote extends React.Component{
                         </Col>
                     </Row>
                 </Container>
-
-                <Footer/>
             </div>
         );
     }

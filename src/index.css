@@ -32,3 +32,16 @@ code {
 .mt-7{
     margin-top:70px;
 }
+
+h1{
+    font-family: 'DancingScript', serif;
+    font-weight: bold !important;
+}
+
+.gold{
+    background: #93784d !important;
+}
+
+.hide{
+    display: none !important;
+}

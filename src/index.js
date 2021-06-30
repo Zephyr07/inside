@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ListeNote from "./pages/liste-note/liste-note";
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ListeNote />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

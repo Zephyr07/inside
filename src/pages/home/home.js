@@ -6,11 +6,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
-import ListGroup from "react-bootstrap/ListGroup";
-import Media from "react-bootstrap/Media";
 import bg1 from '../../asset/images/bg_login.jpg'
+import fond from '../../asset/images/fond.jpg'
 import Footer from "../../components/footer/footer";
 import Info from "../../components/info/info";
+import {LinkContainer} from "react-router-bootstrap";
+import Button from "react-bootstrap/Button";
 
 class Home extends React.Component{
     constructor(props){
@@ -25,31 +26,13 @@ class Home extends React.Component{
     }
 
 
-    getNews(){
-        return [
-            {
-                name:'news A',
-                type: 'News',
-                description: 'Description',
-                image: bg1
-            },
-            {
-                name:'Even A',
-                type: 'Evènements',
-                description: 'Description',
-                image: bg1
-            }
-        ]
-    };
-
     render(){
         return (
-            <div>
-                <Header/>
+            <div className="home-page">
                 <Jumbotron fluid>
                     <Container>
                         <Row>
-                            <Col xs={12} md={8}>
+                            <Col>
                                 <Carousel>
                                     <Carousel.Item>
                                         <img
@@ -65,7 +48,7 @@ class Home extends React.Component{
                                     <Carousel.Item>
                                         <img
                                             className="d-block w-100"
-                                            src={bg1}
+                                            src={fond}
                                             alt="Second slide"
                                         />
 
@@ -88,98 +71,6 @@ class Home extends React.Component{
                                     </Carousel.Item>
                                 </Carousel>
                             </Col>
-                            <Col>
-                                <ListGroup className="list">
-                                    <ListGroup.Item>
-                                        <Media>
-                                            <img
-                                                width={64}
-                                                height={64}
-                                                className="mr-3"
-                                                src={bg1}
-                                                alt="Generic placeholder"
-                                            />
-                                            <Media.Body>
-                                                <h5>Media Heading</h5>
-                                                <p>
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel
-                                                </p>
-                                            </Media.Body>
-                                        </Media>
-                                    </ListGroup.Item>
-                                    <ListGroup.Item>
-                                        <Media>
-                                            <img
-                                                width={64}
-                                                height={64}
-                                                className="mr-3"
-                                                src={bg1}
-                                                alt="Generic placeholder"
-                                            />
-                                            <Media.Body>
-                                                <h5>Media Heading</h5>
-                                                <p>
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel
-                                                </p>
-                                            </Media.Body>
-                                        </Media>
-                                    </ListGroup.Item>
-                                    <ListGroup.Item>
-                                        <Media>
-                                            <img
-                                                width={64}
-                                                height={64}
-                                                className="mr-3"
-                                                src={bg1}
-                                                alt="Generic placeholder"
-                                            />
-                                            <Media.Body>
-                                                <h5>Media Heading</h5>
-                                                <p>
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel
-                                                </p>
-                                            </Media.Body>
-                                        </Media>
-                                    </ListGroup.Item>
-                                    <ListGroup.Item>
-                                        <Media>
-                                            <img
-                                                width={64}
-                                                height={64}
-                                                className="mr-3"
-                                                src={bg1}
-                                                alt="Generic placeholder"
-                                            />
-                                            <Media.Body>
-                                                <h5>Media Heading</h5>
-                                                <p>
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel
-                                                </p>
-                                            </Media.Body>
-                                        </Media>
-                                    </ListGroup.Item>
-                                    <ListGroup.Item>
-                                        <Media>
-                                            <img
-                                                width={64}
-                                                height={64}
-                                                className="mr-3"
-                                                src={bg1}
-                                                alt="Generic placeholder"
-                                            />
-                                            <Media.Body>
-                                                <h5>Media Heading</h5>
-                                                <p>
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel
-                                                </p>
-                                            </Media.Body>
-                                        </Media>
-                                    </ListGroup.Item>
-
-
-                                </ListGroup>
-
-                            </Col>
                         </Row>
                     </Container>
                 </Jumbotron>
@@ -197,9 +88,15 @@ class Home extends React.Component{
                             description: 'Description',
                             image: bg1
                         }}/>
+                        <Col>
+                            <div className="text-right" >
+                                <LinkContainer to={"/actualite"}>
+                                    <Button variant="dark">Afficher tous les évènements</Button>
+                                </LinkContainer>
+                            </div>
+                        </Col>
                     </Row>
                 </Container>
-                <Footer/>
             </div>
         );
     }

@@ -1,4 +1,16 @@
-.gold{
-    background: #93784d !important;
+.header-page .dropdown-menu .nav-link{
+    color:#000 !important;
 }
 
+.header-page.navbar{
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+.header-page .active{
+    border-bottom: 4px solid #fff;
+}
+
+.header-page .nav-link{
+    padding: 15px .5rem;
+}

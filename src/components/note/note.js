@@ -17,3 +17,4 @@ class Note extends React.Component{
 }
 
 export default Note;
+

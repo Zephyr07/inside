@@ -3,25 +3,33 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import './header.css';
 import NavDropdown from "react-bootstrap/NavDropdown";
-
+import {LinkContainer} from 'react-router-bootstrap'
 class Header extends React.Component{
 
 
     render(){
         return (
-            <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark" className="gold">
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+            <Navbar fixed="top" collapseOnSelect expand="lg"  variant="dark" className="gold header-page">
+                <Navbar.Brand>React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#features">Accueil</Nav.Link>
+                        <LinkContainer to="/home">
+                            <Nav.Link>Accueil</Nav.Link>
+                        </LinkContainer>
                         <NavDropdown title="News" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Notes</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Anniversaires</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Evènements</NavDropdown.Item>
+                            <LinkContainer to="/notes">
+                                <Nav.Link>Notes</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/anniversaire">
+                                <Nav.Link>Anniversaires</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/actualite">
+                                <Nav.Link>Evènements</Nav.Link>
+                            </LinkContainer>
                         </NavDropdown>
                         <NavDropdown title="BVS" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Histoire</NavDropdown.Item>
+                            <NavDropdown.Item href="/histoire">Histoire</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">CEO</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Direction</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Produits</NavDropdown.Item>

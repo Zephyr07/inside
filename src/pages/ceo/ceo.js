@@ -55,8 +55,7 @@ class Ceo extends React.Component{
 
     render(){
         return (
-            <div>
-                <Header/>
+            <div className="ceo-page">
                 <Jumbotron>
                     <Container>
                         <h1>L'histoire de BVS!</h1>
@@ -114,7 +113,6 @@ class Ceo extends React.Component{
                     </Container>
                 </Jumbotron>
 
-                <Footer/>
             </div>
         );
     }

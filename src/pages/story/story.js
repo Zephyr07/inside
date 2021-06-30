@@ -3,51 +3,12 @@ import Header from "../../components/header/header";
 import Container from "react-bootstrap/Container";
 import Footer from "../../components/footer/footer";
 import bg1 from '../../asset/images/bg_login.jpg'
-import pdf from '../../asset/pdf/a.pdf'
 import './story.css';
 import Button from "react-bootstrap/Button";
 import Jumbotron from "react-bootstrap/Jumbotron";
 
 class Story extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={
-            news:[
-                {
-                    id: 1,
-                    name:'Name',
-                    type: 'news',
-                    description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore doloremque hic nostrum obcaecati perferendis repellat sed similique sint voluptate? Consequuntur corporis distinctio id ipsa officia quaerat vitae voluptate? Facere.',
-                    image:'',
-                    updated_at: new Date().toDateString()
-                },
-                {
-                    id: 2,
-                    name:'Lancement VP',
-                    type: 'news',
-                    description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore doloremque hic nostrum obcaecati perferendis repellat sed similique sint voluptate? Consequuntur corporis distinctio id ipsa officia quaerat vitae voluptate? Facere.',
-                    image:bg1,
-                    updated_at: new Date().toDateString()
-                },
-                {
-                    id: 3,
-                    name:'FUsion VP',
-                    type: 'news',
-                    description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore doloremque hic nostrum obcaecati perferendis repellat sed similique sint voluptate? Consequuntur corporis distinctio id ipsa officia quaerat vitae voluptate? Facere.',
-                    image:bg1,
-                    updated_at: new Date().toDateString()
-                },
-                {
-                    id: 4,
-                    name:'COngé VP',
-                    type: 'news',
-                    description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore doloremque hic nostrum obcaecati perferendis repellat sed similique sint voluptate? Consequuntur corporis distinctio id ipsa officia quaerat vitae voluptate? Facere.',
-                    image:bg1,
-                    updated_at: new Date().toDateString()
-                },
-            ],
-        }
-    }
+
 
     componentDidMount(){
         document.title = "Notre histoire - BVS Inside"
@@ -57,13 +18,11 @@ class Story extends React.Component{
     render(){
         return (
             <div>
-                <Header/>
                 <Jumbotron>
                     <Container>
                         <h1>L'histoire de BVS!</h1>
-                        <iframe src={pdf} width="100%" height="500px"></iframe>
                         <div>
-                            <img className="float-left" width={500} height={400} src={bg1}/>
+                            <img className="float-left" alt="" width={500} height={400} src={bg1}/>
                             <p className="float-right">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam aut deserunt distinctio dolore error, est iusto laborum maxime neque omnis quae repudiandae sit. Animi at odio voluptas! Ratione, sint.
                             </p>
@@ -86,7 +45,7 @@ class Story extends React.Component{
                                 placeat quo.</p>
                         </div>
                         <div>
-                            <img className="float-right" width={400} height={400} src={bg1}/>
+                            <img className="float-right" alt="" width={400} height={400} src={bg1}/>
                             <p className="float-left">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam aut deserunt distinctio dolore error, est iusto laborum maxime neque omnis quae repudiandae sit. Animi at odio voluptas! Ratione, sint.
                             </p>
@@ -114,8 +73,6 @@ class Story extends React.Component{
                         </p>
                     </Container>
                 </Jumbotron>
-
-                <Footer/>
             </div>
         );
     }

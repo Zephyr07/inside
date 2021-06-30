@@ -4,88 +4,63 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Footer from "../../components/footer/footer";
 import Col from "react-bootstrap/Col";
-import bg1 from '../../asset/images/bg_login.jpg'
 import Card from "react-bootstrap/Card";
 import './detail-actualite.css';
 import Button from "react-bootstrap/Button";
+import * as api from "../../providers/api/api";
+import {LinkContainer} from "react-router-bootstrap";
 
 class DetailActualite extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={
-            news:[
-                {
-                    id: 1,
-                    name:'Name',
-                    type: 'news',
-                    description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore doloremque hic nostrum obcaecati perferendis repellat sed similique sint voluptate? Consequuntur corporis distinctio id ipsa officia quaerat vitae voluptate? Facere.',
-                    image:'',
-                    updated_at: new Date().toDateString()
-                },
-                {
-                    id: 2,
-                    name:'Lancement VP',
-                    type: 'news',
-                    description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore doloremque hic nostrum obcaecati perferendis repellat sed similique sint voluptate? Consequuntur corporis distinctio id ipsa officia quaerat vitae voluptate? Facere.',
-                    image:bg1,
-                    updated_at: new Date().toDateString()
-                },
-                {
-                    id: 3,
-                    name:'FUsion VP',
-                    type: 'news',
-                    description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore doloremque hic nostrum obcaecati perferendis repellat sed similique sint voluptate? Consequuntur corporis distinctio id ipsa officia quaerat vitae voluptate? Facere.',
-                    image:bg1,
-                    updated_at: new Date().toDateString()
-                },
-                {
-                    id: 4,
-                    name:'COngé VP',
-                    type: 'news',
-                    description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore doloremque hic nostrum obcaecati perferendis repellat sed similique sint voluptate? Consequuntur corporis distinctio id ipsa officia quaerat vitae voluptate? Facere.',
-                    image:bg1,
-                    updated_at: new Date().toDateString()
-                },
-            ],
-        }
-    }
+
+    state={
+        note:{}
+    };
 
     componentDidMount(){
-
+        const id = this.props.match.params.idActu;
+        // recupération DES NOTES
+        const datas = api.getNotes();
+        this.setState(
+            {
+                note: datas[id]
+            }
+        )
     }
 
 
     render(){
+        const {id, title, description, image, file, updated_at} = this.state.note;
+
         return (
             <div>
-                <Header/>
-
                 <Container className="mb-3 mt-7">
                     <Row>
                         <Col>
                             <Card className="img">
-                                <Card.Img src={bg1} alt="Card image" />
+                                <Card.Img src={image} alt={title} />
                                 <Card.Body>
-                                    <Card.Title>Card title</Card.Title>
+                                    <Card.Title> {title} </Card.Title>
                                     <Card.Text>
-                                        This is a wider card with supporting text below as a natural lead-in to
-                                        additional content. This content is a little bit longer.
+                                        {description}
                                     </Card.Text>
                                     <Card.Text>
                                         Document(s)
+                                        <br/>
+                                        <a href="">{title}</a>
                                     </Card.Text>
                                     <small className="text-muted">
-                                        Last updated 3 mins ago
+                                        Publié le {updated_at}
                                     </small>
-                                    <div className="text-right" >
-                                        <Button variant="dark">Retour</Button>
+                                    <div className="text-right hide" >
+                                        <LinkContainer to="/notes">
+                                            <Button variant="dark">Retour</Button>
+                                        </LinkContainer>
                                     </div>
                                 </Card.Body>
                             </Card>
                         </Col>
                     </Row>
                 </Container>
-                <Footer/>
             </div>
         );
     }

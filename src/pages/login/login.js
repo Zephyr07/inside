@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col'
 import logo from '../../asset/images/logo-bvs21.svg';
 import * as React from "react";
 
+
 class Login extends React.Component{
     constructor(props){
         super(props);
@@ -18,9 +19,11 @@ class Login extends React.Component{
     }
 
     doLogin = async () => {
+        console.log(props);
+
         const {username,password} = this.state;
         try {
-            console.log('credentials',username,password);
+            console.log(this.props,'credentials',username,password);
             /*let res = await login(phone,password);
             // redirection vers Home
             this.props.navigation.popToTop();
@@ -30,7 +33,7 @@ class Login extends React.Component{
             console.log(e)
 
         }
-    }
+    };
 
     render() {
         return (

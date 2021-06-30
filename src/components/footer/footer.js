@@ -7,7 +7,7 @@ class Footer extends React.Component{
 
     render(){
         return (
-            <Navbar sticky="bottom" collapseOnSelect expand="lg" bg="dark" variant="dark" className="gold">
+            <Navbar sticky="bottom" collapseOnSelect expand="lg" variant="dark" className="gold">
                 <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
                 &copy; 2021
 
