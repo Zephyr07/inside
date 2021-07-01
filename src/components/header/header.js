@@ -19,22 +19,26 @@ class Header extends React.Component{
                         </LinkContainer>
                         <NavDropdown title="News" id="collasible-nav-dropdown">
                             <LinkContainer to="/notes">
-                                <Nav.Link>Notes</Nav.Link>
+                                <Nav.Link className="dropdown-i">Notes</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to="/anniversaire">
-                                <Nav.Link>Anniversaires</Nav.Link>
+                                <Nav.Link className="dropdown-i">Anniversaires</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to="/actualite">
-                                <Nav.Link>Evènements</Nav.Link>
+                                <Nav.Link className="dropdown-i">Evènements</Nav.Link>
                             </LinkContainer>
                         </NavDropdown>
                         <NavDropdown title="BVS" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="/histoire">Histoire</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">CEO</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Direction</NavDropdown.Item>
+                            <LinkContainer to="/organigramme">
+                                <Nav.Link className="dropdown-i">Organigramme</Nav.Link>
+                            </LinkContainer>
                             <NavDropdown.Item href="#action/3.3">Produits</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Promos</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Points de vente</NavDropdown.Item>
+                            <LinkContainer to="/pos">
+                                <Nav.Link className="dropdown-i">Points de vente</Nav.Link>
+                            </LinkContainer>
                         </NavDropdown>
                     </Nav>
                     <Nav>

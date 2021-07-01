@@ -1,6 +1,5 @@
 import * as React from "react";
 import './home.css';
-import Header from "../../components/header/header";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -8,7 +7,6 @@ import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
 import bg1 from '../../asset/images/bg_login.jpg'
 import fond from '../../asset/images/fond.jpg'
-import Footer from "../../components/footer/footer";
 import Info from "../../components/info/info";
 import {LinkContainer} from "react-router-bootstrap";
 import Button from "react-bootstrap/Button";

@@ -4,9 +4,6 @@ import {LinkContainer} from "react-router-bootstrap";
 
 
 class CustomCard extends React.Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
         const {id, image, title, description, updated_at} = this.props.news;

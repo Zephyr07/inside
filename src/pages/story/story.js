@@ -1,7 +1,5 @@
 import * as React from "react";
-import Header from "../../components/header/header";
 import Container from "react-bootstrap/Container";
-import Footer from "../../components/footer/footer";
 import bg1 from '../../asset/images/bg_login.jpg'
 import './story.css';
 import Button from "react-bootstrap/Button";
@@ -17,12 +15,14 @@ class Story extends React.Component{
 
     render(){
         return (
-            <div>
+            <div className="story-page">
                 <Jumbotron>
                     <Container>
                         <h1>L'histoire de BVS!</h1>
                         <div>
-                            <img className="float-left" alt="" width={500} height={400} src={bg1}/>
+                            <div className="float-left gauche">
+                                <img alt="" width={500} height={400} src={bg1}/>
+                            </div>
                             <p className="float-right">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam aut deserunt distinctio dolore error, est iusto laborum maxime neque omnis quae repudiandae sit. Animi at odio voluptas! Ratione, sint.
                             </p>

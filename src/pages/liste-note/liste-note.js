@@ -1,10 +1,8 @@
 import * as React from "react";
-import Header from "../../components/header/header";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ListGroup from "react-bootstrap/ListGroup";
-import Footer from "../../components/footer/footer";
 import './liste-note.css';
 import ListItem from "../../components/list-item/list-item";
 import Card from "react-bootstrap/Card";

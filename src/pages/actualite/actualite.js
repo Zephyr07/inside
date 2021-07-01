@@ -1,14 +1,11 @@
 import * as React from "react";
 import './actualite.css';
-import Header from "../../components/header/header";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Footer from "../../components/footer/footer";
 import CardColumns from 'react-bootstrap/CardColumns'
 import Col from "react-bootstrap/Col";
 import CustomCard from "../../components/custom-card/custom-card";
 import * as api from "../../providers/api/api";
-import {LinkContainer} from "react-router-bootstrap";
 
 class Actualite extends React.Component{
     state = {
@@ -16,7 +13,6 @@ class Actualite extends React.Component{
     };
 
     componentDidMount(){
-        const id = this.props.match.params.type;
         // recupération DES NOTES
         const datas = api.getNotes();
         this.setState(

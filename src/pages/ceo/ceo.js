@@ -1,55 +1,14 @@
 import * as React from "react";
-import Header from "../../components/header/header";
 import Container from "react-bootstrap/Container";
-import Footer from "../../components/footer/footer";
 import bg1 from '../../asset/images/bg_login.jpg'
 import './ceo.css';
 import Button from "react-bootstrap/Button";
 import Jumbotron from "react-bootstrap/Jumbotron";
 
 class Ceo extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={
-            news:[
-                {
-                    id: 1,
-                    name:'Name',
-                    type: 'news',
-                    description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore doloremque hic nostrum obcaecati perferendis repellat sed similique sint voluptate? Consequuntur corporis distinctio id ipsa officia quaerat vitae voluptate? Facere.',
-                    image:'',
-                    updated_at: new Date().toDateString()
-                },
-                {
-                    id: 2,
-                    name:'Lancement VP',
-                    type: 'news',
-                    description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore doloremque hic nostrum obcaecati perferendis repellat sed similique sint voluptate? Consequuntur corporis distinctio id ipsa officia quaerat vitae voluptate? Facere.',
-                    image:bg1,
-                    updated_at: new Date().toDateString()
-                },
-                {
-                    id: 3,
-                    name:'FUsion VP',
-                    type: 'news',
-                    description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore doloremque hic nostrum obcaecati perferendis repellat sed similique sint voluptate? Consequuntur corporis distinctio id ipsa officia quaerat vitae voluptate? Facere.',
-                    image:bg1,
-                    updated_at: new Date().toDateString()
-                },
-                {
-                    id: 4,
-                    name:'COngé VP',
-                    type: 'news',
-                    description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore doloremque hic nostrum obcaecati perferendis repellat sed similique sint voluptate? Consequuntur corporis distinctio id ipsa officia quaerat vitae voluptate? Facere.',
-                    image:bg1,
-                    updated_at: new Date().toDateString()
-                },
-            ],
-        }
-    }
 
     componentDidMount(){
-        document.title = "Notre histoire - BVS Inside"
+        document.title = "Mot du CEO - BVS Inside"
     }
 
 

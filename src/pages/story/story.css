@@ -1,10 +1,16 @@
-.img img{
+.story-page .img img{
     height: 400px;
     width: 100% !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
 }
 
-.card-title{
+.story-page .card-title{
     font-family: DancingScript, "Open Sans";
     font-size: 2rem;
     font-weight: bold;
+}
+
+.story-page .gauche{
+    margin-right: 10px;
 }

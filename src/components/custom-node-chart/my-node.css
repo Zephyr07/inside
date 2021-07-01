@@ -1,0 +1,38 @@
+
+
+.orgchart.myChart > ul > li > ul li::before {
+  border-top-color: #93784D;
+}
+
+.orgchart.myChart > ul > li > ul li .oc-node::before,
+.orgchart.myChart ul li .oc-node:not(:only-child)::after {
+  background-color: #93784D;
+}
+
+.orgchart.myChart .oc-node .position {
+  box-sizing: border-box;
+  background-color: #93784D;
+  color: #fff;
+  width: 130px;
+  height: 65px;
+  padding: 2px;
+}
+
+.orgchart.myChart .oc-node .fullname {
+  box-sizing: border-box;
+  color: #93784d;
+  background-color: #fff;
+  width: 130px;
+  height: 65px;
+  padding: 2px;
+  border: 1px solid #93784D;
+}
+
+.titre{
+    font-size: 12px;
+}
+
+.nom{
+    font-size: 15px;
+    font-weight: bold;
+}

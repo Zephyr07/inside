@@ -5,10 +5,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import './birthday.css';
-import anniv_juillet from '../../asset/images/anniv_juillet.png'
-import Footer from "../../components/footer/footer";
-import Info from "../../components/info/info";
-import Media from "react-bootstrap/Media";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 import Badge from "react-bootstrap/Badge";

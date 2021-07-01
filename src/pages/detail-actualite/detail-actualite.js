@@ -1,8 +1,6 @@
 import * as React from "react";
-import Header from "../../components/header/header";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Footer from "../../components/footer/footer";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import './detail-actualite.css';
@@ -29,7 +27,7 @@ class DetailActualite extends React.Component{
 
 
     render(){
-        const {id, title, description, image, file, updated_at} = this.state.note;
+        const {title, description, image, file, updated_at} = this.state.note;
 
         return (
             <div>
@@ -46,7 +44,7 @@ class DetailActualite extends React.Component{
                                     <Card.Text>
                                         Document(s)
                                         <br/>
-                                        <a href="">{title}</a>
+                                        <a href={file}>{title}</a>
                                     </Card.Text>
                                     <small className="text-muted">
                                         Publié le {updated_at}
