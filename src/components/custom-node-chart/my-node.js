@@ -17,7 +17,7 @@ const MyNode = ({ nodeData }) => {
             placement="right"
             delay={{ show: 1000, hide: 5000 }}
             overlay={
-                <Tooltip id="button-tooltip">
+                <Tooltip>
                     Téléphone : {nodeData.phone}
                     <br/>
                     Poste : {nodeData.ipphone}
@@ -26,8 +26,8 @@ const MyNode = ({ nodeData }) => {
                 </Tooltip>
             }
         >
-            <Card style={{ width: '130px' }}>
-                <img src={nodeData.image} height={130} alt={nodeData.name}/>
+            <Card className="card-w">
+                <img src={nodeData.image} height={190} alt={nodeData.name}/>
                 <div className="nom">{nodeData.name}</div>
                 <div className="titre">{nodeData.title}</div>
             </Card>

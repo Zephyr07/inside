@@ -1,17 +1,17 @@
 
 
 .orgchart.myChart > ul > li > ul li::before {
-  border-top-color: #93784D;
+  border-top-color: #b0976d;
 }
 
 .orgchart.myChart > ul > li > ul li .oc-node::before,
 .orgchart.myChart ul li .oc-node:not(:only-child)::after {
-  background-color: #93784D;
+  background-color: #b0976d;
 }
 
 .orgchart.myChart .oc-node .position {
   box-sizing: border-box;
-  background-color: #93784D;
+  background-color: #b0976d;
   color: #fff;
   width: 130px;
   height: 65px;
@@ -20,12 +20,12 @@
 
 .orgchart.myChart .oc-node .fullname {
   box-sizing: border-box;
-  color: #93784d;
+  color: #b0976d;
   background-color: #fff;
   width: 130px;
   height: 65px;
   padding: 2px;
-  border: 1px solid #93784D;
+  border: 1px solid #b0976d;
 }
 
 .titre{
@@ -35,4 +35,8 @@
 .nom{
     font-size: 15px;
     font-weight: bold;
+}
+
+.card-w{
+    width: 140px;
 }

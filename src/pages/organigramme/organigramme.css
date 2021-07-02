@@ -1,15 +1,15 @@
-.right-line {
+.organigramme-page .right-line {
     border-right: 5px #ccc solid;
     height:2em
 }
 
-.top-line {
+.organigramme-page .top-line {
     border-top: 5px #ccc solid;
 }
 
-.halved {
+.organigramme-page .halved {
     width: 50%;
     float:left;
 }
 
-.container{margin-top: 100px}
+.organigramme-page .container{margin-top: 100px}

@@ -1,9 +1,9 @@
-.img img{
+.detail-actualite-page .img img{
     height: 400px;
     width: 100% !important;
 }
 
-.card-title{
+.detail-actualite-page .card-title{
     font-family: DancingScript, "Open Sans";
     font-size: 2rem;
     font-weight: bold;

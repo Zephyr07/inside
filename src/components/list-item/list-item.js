@@ -9,7 +9,7 @@ class ListItem extends React.Component{
     render(){
         return (
             <ListGroup.Item className="list-item-page">
-                <LinkContainer to={"/detail-actualite/"+this.props.note.id}>
+                <LinkContainer to={"/detail-note/"+this.props.note.id}>
                     <Media>
                         <Media.Body>
                             <h5>{this.props.note.title}</h5>

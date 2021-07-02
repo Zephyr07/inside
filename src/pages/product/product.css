@@ -1,0 +1,27 @@
+.product-page .card-title{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-page .card-title:hover{
+    color:#b0976d;
+}
+
+.product-page td:first-child{
+    font-weight: bold;
+}
+
+.product-page button{
+    background: transparent;
+    border:2px solid #b0976d;
+    color : #b0976d;
+    margin-bottom: 10px;
+}
+
+.product-page button:focus{
+    background: #000;
+    border:2px solid #b0976d;
+    color : #b0976d;
+    margin-bottom: 10px;
+}
+

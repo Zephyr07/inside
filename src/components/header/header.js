@@ -29,13 +29,16 @@ class Header extends React.Component{
                             </LinkContainer>
                         </NavDropdown>
                         <NavDropdown title="BVS" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="/histoire">Histoire</NavDropdown.Item>
+                            <LinkContainer to="/histoire">
+                                <Nav.Link className="dropdown-i">Histoire</Nav.Link>
+                            </LinkContainer>
                             <NavDropdown.Item href="#action/3.2">CEO</NavDropdown.Item>
                             <LinkContainer to="/organigramme">
                                 <Nav.Link className="dropdown-i">Organigramme</Nav.Link>
                             </LinkContainer>
-                            <NavDropdown.Item href="#action/3.3">Produits</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Promos</NavDropdown.Item>
+                            <LinkContainer to="/product">
+                                <Nav.Link className="dropdown-i">Produits</Nav.Link>
+                            </LinkContainer>
                             <LinkContainer to="/pos">
                                 <Nav.Link className="dropdown-i">Points de vente</Nav.Link>
                             </LinkContainer>

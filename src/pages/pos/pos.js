@@ -1,8 +1,6 @@
 import * as React from "react";
 import Container from "react-bootstrap/Container";
-import bg1 from '../../asset/images/bg_login.jpg'
 import './pos.css';
-import Button from "react-bootstrap/Button";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Table from "react-bootstrap/Table";
 

@@ -9,7 +9,7 @@ class Info extends React.Component{
         const {name, image, description} = this.props.news;
         return (
             <Col className="mb-3" xs={12} md={6}>
-                <h1>{name}</h1>
+                <h3>{name}</h3>
                 <img
                     width="100%"
                     height={250}

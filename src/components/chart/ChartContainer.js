@@ -239,11 +239,11 @@ const ChartContainer = forwardRef(
       }
     };
 
-    const changeHierarchy = async (draggedItemData, dropTargetId) => {
+    /*const changeHierarchy = async (draggedItemData, dropTargetId) => {
       await dsDigger.removeNode(draggedItemData.id);
       await dsDigger.addChildren(dropTargetId, draggedItemData);
       setDS({ ...dsDigger.ds });
-    };
+    };*/
 
     useImperativeHandle(ref, () => ({
       exportTo: (exportFilename, exportFileextension) => {

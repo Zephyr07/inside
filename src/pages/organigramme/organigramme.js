@@ -15,7 +15,7 @@ class Organigramme extends React.Component{
     render(){
 
         return (
-            <div className="pos-page">
+            <div className="organigramme-page">
                 <Container>
                     <Row>
                         <h1>Organigramme</h1>

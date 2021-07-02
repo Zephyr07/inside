@@ -30,7 +30,7 @@ class DetailActualite extends React.Component{
         const {title, description, image, file, updated_at} = this.state.note;
 
         return (
-            <div>
+            <div className="detail-actualite-page">
                 <Container className="mb-3 mt-7">
                     <Row>
                         <Col>
@@ -54,6 +54,10 @@ class DetailActualite extends React.Component{
                                             <Button variant="dark">Retour</Button>
                                         </LinkContainer>
                                     </div>
+                                    <br/>
+                                    <LinkContainer to={"/actualite"}>
+                                        <Button variant="dark">Retour</Button>
+                                    </LinkContainer>
                                 </Card.Body>
                             </Card>
                         </Col>
